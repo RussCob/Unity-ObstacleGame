@@ -6,8 +6,8 @@ public class Mover : MonoBehaviour
 {
 
     //these variables change our movement speed
-    [SerializeField] float yValue = 0.02f;
-    [SerializeField] float zValue = 0;
+    //[SerializeField] float yValue = 0.02f;
+    
 
 
     // Start is called before the first frame update
@@ -21,7 +21,8 @@ public class Mover : MonoBehaviour
     {
 
         float xValue = Input.GetAxis("Horizontal");
-        transform.Translate(xValue,yValue,zValue);
+        float zValue = Input.GetAxis("Vertical");
+        transform.Translate(xValue,0,zValue);
         
     }
 }
