@@ -20,8 +20,9 @@ public class Mover : MonoBehaviour
     void Update()
     {
 
-        float xValue = Input.GetAxis("Horizontal");
-        float zValue = Input.GetAxis("Vertical");
+        float xValue = Input.GetAxis("Horizontal") * Time.deltaTime;
+        float zValue = Input.GetAxis("Vertical") * Time.deltaTime;
+        
         transform.Translate(xValue,0,zValue);
         
     }
