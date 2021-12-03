@@ -9,7 +9,7 @@ public class Mover : MonoBehaviour
     //[SerializeField] float yValue = 0.02f;
     
 
-
+    [SerializeField] float moveSpeed = 10f;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,9 +20,9 @@ public class Mover : MonoBehaviour
     void Update()
     {
 
-        float xValue = Input.GetAxis("Horizontal") * Time.deltaTime;
-        float zValue = Input.GetAxis("Vertical") * Time.deltaTime;
-        
+        float xValue = Input.GetAxis("Horizontal") * Time.deltaTime * moveSpeed;
+        float zValue = Input.GetAxis("Vertical")   * Time.deltaTime * moveSpeed;
+
         transform.Translate(xValue,0,zValue);
         
     }
