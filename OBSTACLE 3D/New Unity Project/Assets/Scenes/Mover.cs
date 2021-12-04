@@ -13,6 +13,7 @@ public class Mover : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // call method
         PrintInstruction();
     }
 
@@ -20,16 +21,22 @@ public class Mover : MonoBehaviour
     void Update()
     {
         //
+        MovePlayer();
+        
+    }
+
+    // create new method
+    void PrintInstruction ()
+    {
+        Debug.Log("Welcome to the game");
+    }
+
+    void MovePlayer()
+    {
         float xValue = Input.GetAxis("Horizontal") * Time.deltaTime * moveSpeed;
         float zValue = Input.GetAxis("Vertical")   * Time.deltaTime * moveSpeed;
 
         transform.Translate(xValue,0,zValue);
-        
-    }
-
-    void PrintInstruction ()
-    {
-        Debug.Log("Welcome to the game");
     }
 
 }
