@@ -13,7 +13,7 @@ public class Mover : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        PrintInstruction();
     }
 
     // Update is called once per frame
