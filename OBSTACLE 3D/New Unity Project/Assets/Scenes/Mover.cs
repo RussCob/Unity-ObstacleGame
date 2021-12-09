@@ -25,7 +25,7 @@ public class Mover : MonoBehaviour
         
     }
 
-    // create new method
+    // create new method //
     void PrintInstruction ()
     {
         Debug.Log("Welcome to the game");
