@@ -10,7 +10,7 @@ public class Mover : MonoBehaviour
     
 
     [SerializeField] float moveSpeed = 10f;
-    // Start is called before the first frame update
+    // Start is called before the first frame update //
     void Start()
     {
         // call method
@@ -25,7 +25,7 @@ public class Mover : MonoBehaviour
         
     }
 
-    // create new method //
+    // create new method
     void PrintInstruction ()
     {
         Debug.Log("Welcome to the game");
